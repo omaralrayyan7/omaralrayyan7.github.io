@@ -123,7 +123,7 @@
       border-radius: 50%;
       width: 36px; height: 36px;
       transition: background 0.3s, color 0.3s;
-      margin-right: 14px;
+      margin-right: 20px;
     }
     .social-links a:hover { background: var(--accent); color: var(--bg); }
 
@@ -794,7 +794,7 @@
         <div class="row portfolio-container">
 
           <!-- JoRide -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-flutter filter-web" data-aos="fade-up">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-flutter filter-web filter-iot" data-aos="fade-up">
             <div class="proj-title">JoRide — Smart Ride-Sharing Platform</div>
             <div class="portfolio-wrap">
               <div class="proj-thumb" style="background:linear-gradient(135deg,#040b14 0%,#073d1a 100%);">&#128665;</div>
@@ -841,7 +841,7 @@
           </div>
 
           <!-- Library System -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-iot" data-aos="fade-up">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-other" data-aos="fade-up">
             <div class="proj-title">Library Management System</div>
             <div class="portfolio-wrap">
               <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1a2e 0%,#1a3a5c 100%);">&#128218;</div>
@@ -1123,7 +1123,7 @@
 
     // Isotope portfolio filter
     $(function () {
-      const iso = $('.portfolio-container').isotope({ itemSelector: '.portfolio-item', layoutMode: 'masonry', transitionDuration: '0.3s' });
+      const iso = $('.portfolio-container').isotope({ itemSelector: '.portfolio-item', layoutMode: 'masonry', transitionDuration: 0 });
       $('#portfolio-flters li').on('click', function () {
         $('#portfolio-flters li').removeClass('filter-active');
         $(this).addClass('filter-active');
