@@ -123,7 +123,7 @@
       border-radius: 50%;
       width: 36px; height: 36px;
       transition: background 0.3s, color 0.3s;
-      margin-right: 5px;
+      margin-right: 10px;
     }
     .social-links a:hover { background: var(--accent); color: var(--bg); }
 
@@ -296,7 +296,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 8px;
+      gap: 18px;
     }
     .skills-box .logos img { height: 46px; object-fit: contain; }
     .skills-tags span {
@@ -374,6 +374,72 @@
       #main { margin-left: 0; }
       .mobile-nav-toggle { display: block; }
     }
+
+    @media (max-width: 991px) {
+      .about-me .content h3 { font-size: 15px; }
+      .about-me .content .fst-italic { font-size: 13px; line-height: 1.7; }
+      .about-me .content ul li { font-size: 12px; }
+      .about-me .content > p:last-child { font-size: 13px; }
+    }
+
+    /* ===== DARK MODE TOGGLE ===== */
+    #darkModeToggle {
+      position: fixed;
+      right: 58px; top: 10px;
+      z-index: 9998;
+      border: 0;
+      background: rgba(255,255,255,0.12);
+      font-size: 20px;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      border-radius: 50%;
+      width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s, color 0.3s;
+    }
+    #darkModeToggle:hover { background: var(--accent); color: var(--bg); }
+
+    /* ===== LIGHT MODE ===== */
+    body.light-mode {
+      --bg: #f5f7fa;
+      background: var(--bg);
+      color: #1a1a2e;
+    }
+    body.light-mode #header {
+      background: #ffffff;
+      border-right-color: rgba(0,0,0,0.1);
+    }
+    body.light-mode #header h1 a { color: #1a1a2e; }
+    body.light-mode #header h2 { color: rgba(0,0,0,0.6); }
+    body.light-mode .nav-menu a { color: #444; }
+    body.light-mode .nav-menu a:hover,
+    body.light-mode .nav-menu li.active > a { color: #1a1a2e; }
+    body.light-mode .nav-menu a i { color: #888; }
+    body.light-mode .social-links a { background: rgba(0,0,0,0.08); color: #1a1a2e; }
+    body.light-mode .section-title h2 { color: #777; }
+    body.light-mode .section-title p { color: #1a1a2e; }
+    body.light-mode .about-me .content p { color: rgba(0,0,0,0.75); }
+    body.light-mode .about-me .content h3 { color: #1a1a2e; }
+    body.light-mode .about-me .content ul li { color: rgba(0,0,0,0.75); }
+    body.light-mode .about-me .content ul li strong { color: #1a1a2e; }
+    body.light-mode .interest-box { background: rgba(0,0,0,0.06); }
+    body.light-mode .interest-box:hover { background: rgba(0,0,0,0.1); }
+    body.light-mode .interest-box h3 { color: #1a1a2e; }
+    body.light-mode .icon-box { background: rgba(0,0,0,0.04); }
+    body.light-mode .icon-box:hover { background: rgba(0,0,0,0.07); }
+    body.light-mode .icon-box h4 { color: #1a1a2e; }
+    body.light-mode .icon-box p { color: rgba(0,0,0,0.65); }
+    body.light-mode .icon-box ul li { color: rgba(0,0,0,0.65); }
+    body.light-mode #portfolio-flters { background: rgba(0,0,0,0.08); }
+    body.light-mode #portfolio-flters li { color: rgba(0,0,0,0.65); }
+    body.light-mode .contact .info-box { background: rgba(0,0,0,0.05); }
+    body.light-mode .contact .info-box h3 { color: rgba(0,0,0,0.55); }
+    body.light-mode .contact .info-box p { color: #1a1a2e; }
+    body.light-mode #footer { background: #e8ecf0; color: rgba(0,0,0,0.5); }
+    body.light-mode .mobile-nav-overly { background: rgba(200,210,220,0.85); }
+    body.light-mode #darkModeToggle { background: rgba(0,0,0,0.1); color: #1a1a2e; }
+    body.light-mode #darkModeToggle:hover { background: var(--accent); color: #fff; }
   </style>
 </head>
 
@@ -381,6 +447,10 @@
 
   <button type="button" class="mobile-nav-toggle" id="mobileNavToggle">
     <i class="bx bx-menu"></i>
+  </button>
+
+  <button type="button" id="darkModeToggle" title="Toggle light/dark mode">
+    <i class="bx bx-sun"></i>
   </button>
 
   <!-- ======= Header / Sidebar ======= -->
@@ -393,7 +463,7 @@
         <h2>I'm a <span class="typing"></span></h2>
       </div>
 
-      <nav class="nav-menu d-none d-xl-block">
+      <nav class="nav-menu">
         <ul>
           <li class="active"><a href="#about"><i class="bx bx-user"></i><span>About</span></a></li>
           <li><a href="#education"><i class="bx bx-book-open"></i><span>Education</span></a></li>
@@ -407,7 +477,7 @@
       <div class="social-links mt-3">
         <a href="https://www.linkedin.com/in/omar-alrayyan" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
         <a href="https://github.com/omaralrayyan7" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
-        <a href="mailto:omaralrayyan7@gmail.com" title="Email"><i class="bx bxl-google"></i></a>
+        <a href="mailto:omaralrayyan7@gmail.com" title="Email"><i class="bx bx-envelope"></i></a>
       </div>
 
     </div>
@@ -424,13 +494,13 @@
           <p>About Me</p>
         </div>
         <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
+          <div class="col-4 col-lg-4" data-aos="fade-right">
             <img src="https://github.com/omaralrayyan7.png" class="img-fluid" alt="Omar Alrayyan" style="width:100%;border-radius:8px;">
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Software Engineering Student &amp; Full-Stack / Flutter Developer</h3>
+          <div class="col-8 col-lg-8 pt-0 content" data-aos="fade-left">
+            <h3>Full-Stack / Flutter Developer</h3>
             <p class="fst-italic">
-              Software Engineering undergraduate (graduating Jul 2026) building cross-platform mobile &amp; full-stack systems
+              Building cross-platform mobile &amp; full-stack systems
               with Flutter, C#, and SQL. Developed <strong style="color:var(--accent)">JoRide</strong> — an IoT-integrated
               ride-sharing platform — end-to-end across mobile, backend, database, and GPS hardware.
               Completed internships at Link Solutions and Hope International delivering production-level
@@ -464,7 +534,7 @@
       <div class="interests container" style="margin-top:50px;">
         <div class="section-title">
           <h2>Interests</h2>
-          <p>What I Love</p>
+          <p>What I'm Interested In</p>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-4">
@@ -535,13 +605,13 @@
               <p><em>B.Sc. Software Engineering &mdash; Amman, Jordan</em></p>
               <h6 style="color:#fff;margin-bottom:8px;">Relevant Coursework</h6>
               <ul>
-                <li>Software Design Patterns &amp; Architecture (Singleton, Observer, Adapter, Decorator)</li>
-                <li>Database Management Systems &amp; SQL</li>
                 <li>Mobile Application Development (Flutter / Dart)</li>
                 <li>Web Development (ASP.NET Core, JavaScript)</li>
+                <li>Database Management Systems &amp; SQL</li>
                 <li>Object-Oriented Programming (Java, C++)</li>
-                <li>Software Project Management — Agile / Scrum, UML/ERD, Gantt/PERT</li>
+                <li>Software Design Patterns &amp; Architecture (Singleton, Observer, Adapter, Decorator)</li>
                 <li>Security: JWT Auth, OAuth 2.0, XSS mitigation</li>
+                <li>Software Project Management — Agile / Scrum, UML/ERD, Gantt/PERT</li>
               </ul>
             </div>
 
@@ -673,7 +743,7 @@
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <h4>IEEE Member &amp; Technical Volunteer</h4>
-              <h5>2022 &ndash; Present</h5>
+              <h5>2022 &ndash; 2026</h5>
               <p><em>IEEE ASU Chapter</em></p>
               <ul>
                 <li>Organized technical events and student workshops; held leadership roles within the IEEE ASU chapter.</li>
@@ -953,7 +1023,7 @@
               <div class="social-links">
                 <a href="https://www.linkedin.com/in/omar-alrayyan" target="_blank"><i class="bx bxl-linkedin"></i></a>
                 <a href="https://github.com/omaralrayyan7" target="_blank"><i class="bx bxl-github"></i></a>
-                <a href="mailto:omaralrayyan7@gmail.com"><i class="bx bxl-google"></i></a>
+                <a href="mailto:omaralrayyan7@gmail.com"><i class="bx bx-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -995,7 +1065,7 @@
 
   <script>
     // AOS
-    AOS.init({ duration: 800, easing: 'ease-in-out', once: true, mirror: false });
+    AOS.init({ duration: 350, easing: 'ease-out', once: true, mirror: false, offset: 0, delay: 0 });
 
     // Typed.js — same strings/speeds as reference
     new Typed('.typing', {
@@ -1036,6 +1106,19 @@
         a.parentElement.classList.remove('active');
         if (a.getAttribute('href') === current) a.parentElement.classList.add('active');
       });
+    });
+
+    // Dark mode toggle
+    const dmToggle = document.getElementById('darkModeToggle');
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+      dmToggle.innerHTML = '<i class="bx bx-moon"></i>';
+    }
+    dmToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      const isLight = document.body.classList.contains('light-mode');
+      dmToggle.innerHTML = isLight ? '<i class="bx bx-moon"></i>' : '<i class="bx bx-sun"></i>';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
 
     // Isotope portfolio filter
