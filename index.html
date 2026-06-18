@@ -123,7 +123,7 @@
       border-radius: 50%;
       width: 36px; height: 36px;
       transition: background 0.3s, color 0.3s;
-      margin-right: 10px;
+      margin-right: 14px;
     }
     .social-links a:hover { background: var(--accent); color: var(--bg); }
 
@@ -296,7 +296,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 18px;
+      gap: 28px;
     }
     .skills-box .logos img { height: 46px; object-fit: contain; }
     .skills-tags span {
@@ -475,7 +475,7 @@
       </nav>
 
       <div class="social-links mt-3">
-        <a href="https://www.linkedin.com/in/omar-alrayyan" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/omar-alrayyan-93759024a/" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
         <a href="https://github.com/omaralrayyan7" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
         <a href="mailto:omaralrayyan7@gmail.com" title="Email"><i class="bx bx-envelope"></i></a>
       </div>
@@ -743,7 +743,7 @@
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
               <h4>IEEE Member &amp; Technical Volunteer</h4>
-              <h5>2022 &ndash; 2026</h5>
+              <h5>2022 &ndash; 2027</h5>
               <p><em>IEEE ASU Chapter</em></p>
               <ul>
                 <li>Organized technical events and student workshops; held leadership roles within the IEEE ASU chapter.</li>
@@ -786,7 +786,7 @@
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-flutter">Flutter</li>
               <li data-filter=".filter-web">Web / ASP.NET</li>
-              <li data-filter=".filter-java">Java</li>
+              <li data-filter=".filter-iot">IoT</li>
             </ul>
           </div>
         </div>
@@ -841,7 +841,7 @@
           </div>
 
           <!-- Library System -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-java" data-aos="fade-up">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-iot" data-aos="fade-up">
             <div class="proj-title">Library Management System</div>
             <div class="portfolio-wrap">
               <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1a2e 0%,#1a3a5c 100%);">&#128218;</div>
@@ -1021,7 +1021,7 @@
               <i class="bx bx-share-alt"></i>
               <h3>Social Profiles</h3>
               <div class="social-links">
-                <a href="https://www.linkedin.com/in/omar-alrayyan" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/omar-alrayyan-93759024a/" target="_blank"><i class="bx bxl-linkedin"></i></a>
                 <a href="https://github.com/omaralrayyan7" target="_blank"><i class="bx bxl-github"></i></a>
                 <a href="mailto:omaralrayyan7@gmail.com"><i class="bx bx-envelope"></i></a>
               </div>
@@ -1052,7 +1052,7 @@
 
   <footer id="footer">
     <div class="container">
-      <p>&copy; 2025 <strong>Omar Alaa Alrayyan</strong>. All rights reserved.</p>
+      <p>&copy; 2026 <strong>Omar Alaa Alrayyan</strong>. All rights reserved.</p>
     </div>
   </footer>
 
@@ -1123,7 +1123,7 @@
 
     // Isotope portfolio filter
     $(function () {
-      const iso = $('.portfolio-container').isotope({ itemSelector: '.portfolio-item', layoutMode: 'fitRows' });
+      const iso = $('.portfolio-container').isotope({ itemSelector: '.portfolio-item', layoutMode: 'masonry', transitionDuration: '0.3s' });
       $('#portfolio-flters li').on('click', function () {
         $('#portfolio-flters li').removeClass('filter-active');
         $(this).addClass('filter-active');
