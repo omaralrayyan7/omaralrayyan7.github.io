@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/png" href="https://github.com/omaralrayyan7.png"/>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Omar Alrayyan — Portfolio</title>
+  <meta content="Omar Alaa Alrayyan — Software Engineer, Flutter Developer, Full-Stack Developer, IoT Enthusiast" name="description">
+  <meta content="Flutter, C#, ASP.NET, software engineer, portfolio, Omar Alrayyan, JoRide" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 4 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* =========================================
+       Omar Alrayyan — Personal Portfolio
+       Styled after rajaprerak.github.io
+       (BootstrapMade Personal template)
+       ========================================= */
+
+    :root {
+      --accent:  #12d640;
+      --bg:      #040b14;
+      --sidebar: 300px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      background: var(--bg);
+      color: #fff;
+      margin: 0;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #35eb61; text-decoration: none; }
+    ul { list-style: none; padding: 0; margin: 0; }
+
+    /* ===== HEADER / SIDEBAR ===== */
+    #header {
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      width: var(--sidebar);
+      padding: 20px 15px;
+      background: var(--bg);
+      overflow-y: auto;
+      z-index: 9997;
+      border-right: 1px solid rgba(255,255,255,0.05);
+      transition: left 0.3s;
+    }
+
+    #header .profile img {
+      width: 120px; height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    #header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 6px;
+      line-height: 1.3;
+    }
+    #header h1 a { color: #fff; }
+    #header h1 a:hover { color: var(--accent); }
+
+    #header h2 {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      margin: 0;
+    }
+    #header h2 span { color: var(--accent); }
+
+    /* Nav */
+    .nav-menu { margin-top: 25px; }
+    .nav-menu a {
+      display: flex;
+      align-items: center;
+      color: #a8a9b4;
+      padding: 10px 0;
+      font-size: 14px;
+      font-family: "Poppins", sans-serif;
+      transition: color 0.3s;
+    }
+    .nav-menu a i {
+      font-size: 22px;
+      padding-right: 8px;
+      color: #6f7180;
+      transition: color 0.3s;
+    }
+    .nav-menu a:hover,
+    .nav-menu li.active > a { color: #fff; }
+    .nav-menu a:hover i,
+    .nav-menu li.active > a i { color: var(--accent); }
+
+    /* Social */
+    .social-links { margin-top: 20px; }
+    .social-links a {
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border-radius: 50%;
+      width: 36px; height: 36px;
+      transition: background 0.3s, color 0.3s;
+      margin-right: 5px;
+    }
+    .social-links a:hover { background: var(--accent); color: var(--bg); }
+
+    /* ===== MAIN ===== */
+    #main { margin-left: var(--sidebar); }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 60px 0; overflow: hidden; }
+
+    .section-title { padding-bottom: 30px; }
+    .section-title h2 {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0;
+      line-height: 1px;
+      margin: 0 0 5px 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+      font-family: "Poppins", sans-serif;
+    }
+    .section-title h2::after {
+      content: "";
+      width: 120px; height: 1px;
+      display: inline-block;
+      background: var(--accent);
+      margin: 4px 10px;
+    }
+    .section-title p {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-me img { border-radius: 8px; box-shadow: 0 0 30px rgba(18,214,64,0.15); }
+    .about-me .content p { color: rgba(255,255,255,0.75); line-height: 1.9; }
+    .about-me .content h3 { font-size: 20px; font-weight: 700; color: #fff; }
+    .about-me .content ul li {
+      padding-bottom: 8px;
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+    }
+    .about-me .content ul li i { font-size: 18px; padding-right: 4px; color: var(--accent); }
+    .about-me .content ul li strong { color: #fff; }
+
+    /* ===== INTERESTS ===== */
+    .interest-box {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 4px;
+      transition: background 0.3s;
+      margin-bottom: 20px;
+    }
+    .interest-box:hover { background: rgba(255,255,255,0.12); }
+    .interest-box i { font-size: 32px; padding-right: 12px; }
+    .interest-box h3 { font-size: 15px; font-weight: 600; color: #fff; margin: 0; }
+
+    /* ===== ICON BOX (education / experience) ===== */
+    .icon-box {
+      padding: 22px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.05);
+      transition: background 0.3s;
+      margin-bottom: 20px;
+    }
+    .icon-box:hover { background: rgba(255,255,255,0.08); }
+    .icon-box h4 { font-size: 16px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+    .icon-box h4 a { color: var(--accent); }
+    .icon-box h5 { font-size: 13px; color: var(--accent); margin-bottom: 6px; }
+    .icon-box p { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 8px; }
+    .icon-box ul { padding-left: 18px; list-style: disc; }
+    .icon-box ul li { color: rgba(255,255,255,0.7); font-size: 14px; padding-bottom: 4px; }
+    .badge-tag {
+      display: inline-block;
+      background: rgba(18,214,64,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(18,214,64,0.3);
+      border-radius: 3px;
+      font-size: 11px;
+      padding: 2px 7px;
+      margin: 2px 2px 2px 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* ===== PORTFOLIO ===== */
+    #portfolio-flters {
+      padding: 2px 10px;
+      margin: 0 auto 30px;
+      display: inline-flex;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50px;
+    }
+    #portfolio-flters li {
+      cursor: pointer;
+      padding: 8px 16px 10px;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.3s;
+      border-radius: 50px;
+      font-family: "Poppins", sans-serif;
+    }
+    #portfolio-flters li:hover,
+    #portfolio-flters li.filter-active { color: var(--accent); }
+
+    .portfolio-item { margin-bottom: 30px; }
+
+    .portfolio-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+    .portfolio-wrap::before {
+      content: "";
+      background: rgba(0,0,0,0.68);
+      position: absolute; inset: 0;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .portfolio-wrap:hover::before { opacity: 1; }
+    .portfolio-wrap:hover .portfolio-info { opacity: 1; }
+    .portfolio-wrap:hover .proj-thumb { transform: scale(1.07); }
+
+    .proj-thumb {
+      width: 100%; height: 200px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 52px;
+      transition: transform 0.3s;
+    }
+
+    .portfolio-info {
+      position: absolute; inset: 0;
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 15px 18px;
+    }
+    .portfolio-info h4 { font-size: 17px; color: #fff; font-weight: 600; margin-bottom: 3px; }
+    .portfolio-info p { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; margin: 0 0 8px; }
+    .portfolio-links a { color: #fff; font-size: 22px; margin-right: 8px; transition: color 0.3s; }
+    .portfolio-links a:hover { color: var(--accent); }
+    .proj-title { font-size: 14px; font-weight: 600; color: #fff; text-align: center; margin-bottom: 8px; }
+
+    /* ===== SKILLS ===== */
+    .skills-box {
+      background: #fff;
+      border-radius: 6px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+    .skills-box h4 {
+      color: #09203a;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+    .skills-box .logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .skills-box .logos img { height: 46px; object-fit: contain; }
+    .skills-tags span {
+      display: inline-block;
+      background: rgba(18,214,64,0.12);
+      color: #09203a;
+      border: 1px solid rgba(18,214,64,0.5);
+      border-radius: 4px;
+      font-size: 12px;
+      padding: 4px 10px;
+      margin: 3px 3px 3px 0;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact .info-box {
+      text-align: center;
+      padding: 30px 20px 35px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 6px;
+      width: 100%; height: 100%;
+    }
+    .contact .info-box i.bx {
+      font-size: 32px;
+      color: var(--accent);
+      padding: 8px;
+      border: 2px dotted #4cdf6c;
+      border-radius: 50%;
+    }
+    .contact .info-box h3 {
+      font-size: 18px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 700;
+      margin: 12px 0 6px;
+    }
+    .contact .info-box p { font-size: 14px; color: #fff; line-height: 1.8; margin: 0; }
+    .contact .info-box .social-links { margin-top: 12px; }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      background: #020810;
+      color: rgba(255,255,255,0.45);
+      font-size: 13px;
+      text-align: center;
+      padding: 16px;
+    }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-nav-toggle {
+      position: fixed;
+      right: 15px; top: 15px;
+      z-index: 9998;
+      border: 0;
+      background: none;
+      font-size: 28px;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      display: none;
+    }
+    .mobile-nav-overly {
+      width: 100%; height: 100%;
+      z-index: 9996;
+      top: 0; left: 0;
+      position: fixed;
+      background: rgba(9,15,28,0.9);
+      display: none;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1199px) {
+      #header { left: -300px; }
+      #header.header-show { left: 0; }
+      #main { margin-left: 0; }
+      .mobile-nav-toggle { display: block; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <button type="button" class="mobile-nav-toggle" id="mobileNavToggle">
+    <i class="bx bx-menu"></i>
+  </button>
+
+  <!-- ======= Header / Sidebar ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="https://github.com/omaralrayyan7.png" alt="Omar Alrayyan">
+        <h1><a href="#about">Omar Alrayyan</a></h1>
+        <h2>I'm a <span class="typing"></span></h2>
+      </div>
+
+      <nav class="nav-menu d-none d-xl-block">
+        <ul>
+          <li class="active"><a href="#about"><i class="bx bx-user"></i><span>About</span></a></li>
+          <li><a href="#education"><i class="bx bx-book-open"></i><span>Education</span></a></li>
+          <li><a href="#experience"><i class="bx bx-briefcase"></i><span>Experience</span></a></li>
+          <li><a href="#portfolio"><i class="bx bx-code-alt"></i><span>Projects</span></a></li>
+          <li><a href="#skills"><i class="bx bx-server"></i><span>Skills</span></a></li>
+          <li><a href="#contacts"><i class="bx bx-envelope"></i><span>Contact</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="social-links mt-3">
+        <a href="https://www.linkedin.com/in/omar-alrayyan" target="_blank" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/omaralrayyan7" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="mailto:omaralrayyan7@gmail.com" title="Email"><i class="bx bxl-google"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======= Main ======= -->
+  <div id="main">
+
+    <!-- ===== About ===== -->
+    <section id="about" class="about">
+      <div class="about-me container">
+        <div class="section-title">
+          <h2>About</h2>
+          <p>About Me</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="https://github.com/omaralrayyan7.png" class="img-fluid" alt="Omar Alrayyan" style="width:100%;border-radius:8px;">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Software Engineering Student &amp; Full-Stack / Flutter Developer</h3>
+            <p class="fst-italic">
+              Software Engineering undergraduate (graduating Jul 2026) building cross-platform mobile &amp; full-stack systems
+              with Flutter, C#, and SQL. Developed <strong style="color:var(--accent)">JoRide</strong> — an IoT-integrated
+              ride-sharing platform — end-to-end across mobile, backend, database, and GPS hardware.
+              Completed internships at Link Solutions and Hope International delivering production-level
+              ASP.NET / C# / JavaScript features.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <strong>Phone:</strong> <span>+962 790 550 787</span></li>
+                  <li><i class="bx bx-chevron-right"></i> <strong>City:</strong> <span>Amman, Jordan</span></li>
+                  <li><i class="bx bx-chevron-right"></i> <strong>Languages:</strong> <span>Arabic (Native), English (B2)</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <strong>Email:</strong> <span>omaralrayyan7@gmail.com</span></li>
+                  <li><i class="bx bx-chevron-right"></i> <strong>Degree:</strong> <span>B.Sc. Software Engineering</span></li>
+                  <li><i class="bx bx-chevron-right"></i> <strong>Graduation:</strong> <span>July 2026</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Currently incubating JoRide as a university-backed startup, with pitches at Fintech, JSYP, and NTP competitions.
+              Active IEEE member, TEDx volunteer, and community contributor at Applied Science Private University.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interests -->
+      <div class="interests container" style="margin-top:50px;">
+        <div class="section-title">
+          <h2>Interests</h2>
+          <p>What I Love</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-4">
+            <div class="interest-box">
+              <i class="ri-smartphone-line" style="color:#ffbb2c;"></i>
+              <h3>Mobile Development</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="interest-box">
+              <i class="ri-stack-line" style="color:#5578ff;"></i>
+              <h3>Full-Stack Dev</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="interest-box">
+              <i class="ri-wifi-line" style="color:#e80368;"></i>
+              <h3>IoT &amp; GPS Systems</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+            <div class="interest-box">
+              <i class="ri-database-2-line" style="color:#1c9e3f;"></i>
+              <h3>Database Design</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="interest-box">
+              <i class="ri-code-s-slash-line" style="color:#28a745;"></i>
+              <h3>Software Engineering</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="interest-box">
+              <i class="ri-pen-nib-line" style="color:#f1081f;"></i>
+              <h3>UI/UX Design</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="interest-box">
+              <i class="ri-shield-check-line" style="color:#47aeff;"></i>
+              <h3>Security &amp; Auth</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="interest-box">
+              <i class="ri-rocket-line" style="color:#ffc107;"></i>
+              <h3>Startup &amp; Innovation</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section id="education" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Education</h2>
+          <p>Academic Background</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-12" data-aos="fade-up">
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4><a href="https://www.asu.edu.jo/" target="_blank">Applied Science Private University</a></h4>
+              <h5>August 2022 &ndash; July 2026</h5>
+              <p><em>B.Sc. Software Engineering &mdash; Amman, Jordan</em></p>
+              <h6 style="color:#fff;margin-bottom:8px;">Relevant Coursework</h6>
+              <ul>
+                <li>Software Design Patterns &amp; Architecture (Singleton, Observer, Adapter, Decorator)</li>
+                <li>Database Management Systems &amp; SQL</li>
+                <li>Mobile Application Development (Flutter / Dart)</li>
+                <li>Web Development (ASP.NET Core, JavaScript)</li>
+                <li>Object-Oriented Programming (Java, C++)</li>
+                <li>Software Project Management — Agile / Scrum, UML/ERD, Gantt/PERT</li>
+                <li>Security: JWT Auth, OAuth 2.0, XSS mitigation</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="container" style="margin-top:10px;">
+        <div class="section-title">
+          <h2>Certifications</h2>
+          <p>Online Certifications</p>
+        </div>
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="icon-box" style="text-align:center;">
+              <div style="font-size:42px;margin-bottom:10px;">&#127979;</div>
+              <h4 style="color:var(--accent);">CS50x</h4>
+              <p>Introduction to Computer Science</p>
+              <p style="font-size:12px;color:rgba(255,255,255,0.5);">Harvard University</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box" style="text-align:center;">
+              <div style="font-size:42px;margin-bottom:10px;">&#9925;</div>
+              <h4 style="color:var(--accent);">AZ-900</h4>
+              <p>Azure AI Fundamentals</p>
+              <p style="font-size:12px;color:rgba(255,255,255,0.5);">Microsoft</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box" style="text-align:center;">
+              <div style="font-size:42px;margin-bottom:10px;">&#128013;</div>
+              <h4 style="color:var(--accent);">Python Programming</h4>
+              <p>Python Programming Certification</p>
+              <p style="font-size:12px;color:rgba(255,255,255,0.5);">&nbsp;</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box" style="text-align:center;">
+              <div style="font-size:42px;margin-bottom:10px;">&#127760;</div>
+              <h4 style="color:var(--accent);">ASP.NET</h4>
+              <p>ASP.NET Web Development</p>
+              <p style="font-size:12px;color:rgba(255,255,255,0.5);">Hope International</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box" style="text-align:center;">
+              <div style="font-size:42px;margin-bottom:10px;">&#129302;</div>
+              <h4 style="color:var(--accent);">AWS AI Overview</h4>
+              <p>Artificial Intelligence Overview</p>
+              <p style="font-size:12px;color:rgba(255,255,255,0.5);">Huawei</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box" style="text-align:center;">
+              <div style="font-size:42px;margin-bottom:10px;">&#128295;</div>
+              <h4 style="color:var(--accent);">Git &amp; GitHub</h4>
+              <p>Version Control &amp; Collaboration</p>
+              <p style="font-size:12px;color:rgba(255,255,255,0.5);">&nbsp;</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section id="experience" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience</h2>
+          <p>Professional Journey</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-12" data-aos="fade-up">
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4><a href="https://github.com/omaralrayyan7/joride-frontend" target="_blank">JoRide &mdash; Incubated Startup Project</a></h4>
+              <h5>2026 &ndash; Present</h5>
+              <p><em>Founder &amp; Lead Developer</em></p>
+              <div style="margin-bottom:10px;">
+                <span class="badge-tag">Flutter</span><span class="badge-tag">ASP.NET C#</span>
+                <span class="badge-tag">MySQL</span><span class="badge-tag">IoT/GPS (FMC130)</span>
+                <span class="badge-tag">CAN Bus</span><span class="badge-tag">JWT</span>
+              </div>
+              <ul>
+                <li>Selected for university incubation under a formal innovation agreement, validating JoRide as a market-ready ride-sharing solution.</li>
+                <li>Represented JoRide in <strong style="color:#fff;">Fintech</strong>, <strong style="color:#fff;">JSYP</strong>, and <strong style="color:#fff;">NTP</strong> competitions, pitching to investors and industry judges.</li>
+                <li>Architected full system: Flutter mobile app + ASP.NET REST backend + MySQL DB + in-vehicle GPS tracker (FMC130) with CAN bus relay for real-time vehicle tracking &amp; remote access control.</li>
+                <li>Delivered full UML/ERD documentation, Gantt/PERT project plans, and security design (JWT auth, encrypted comms, input validation, data protection).</li>
+              </ul>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <h4>Software Engineering Intern &mdash; Hope International Company</h4>
+              <h5>2024 &middot; 3 months</h5>
+              <p><em>Software Engineering Intern</em></p>
+              <div style="margin-bottom:10px;">
+                <span class="badge-tag">ASP.NET Core</span><span class="badge-tag">C#</span>
+                <span class="badge-tag">Web Applications</span>
+              </div>
+              <ul>
+                <li>Built and extended ASP.NET Core / C# web applications; worked across requirements, backend logic, and UI.</li>
+                <li>Earned ASP.NET certification upon completion.</li>
+              </ul>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <h4>Software Engineering Intern &mdash; Link Solutions</h4>
+              <h5>2024 &middot; 3 months</h5>
+              <p><em>Software Engineering Intern</em></p>
+              <div style="margin-bottom:10px;">
+                <span class="badge-tag">C#</span><span class="badge-tag">ASP.NET MVC</span>
+                <span class="badge-tag">JavaScript</span><span class="badge-tag">SignalR</span>
+                <span class="badge-tag">OAuth 2.0</span><span class="badge-tag">Bootstrap</span>
+              </div>
+              <ul>
+                <li>Full-cycle training: requirements &rarr; C#/ASP.NET backend &rarr; JavaScript UI &rarr; testing.</li>
+                <li>Delivered 8+ production-level features: OAuth 2.0 (Google/Microsoft) login, reCAPTCHA, XSS mitigation, Maps API filtering, real-time chat with SignalR, responsive Bootstrap grid.</li>
+              </ul>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <h4>IEEE Member &amp; Technical Volunteer</h4>
+              <h5>2022 &ndash; Present</h5>
+              <p><em>IEEE ASU Chapter</em></p>
+              <ul>
+                <li>Organized technical events and student workshops; held leadership roles within the IEEE ASU chapter.</li>
+              </ul>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+              <h4>TEDx ASPU Volunteer</h4>
+              <h5>2023 &ndash; Present</h5>
+              <p><em>Applied Science Private University</em></p>
+              <ul>
+                <li>Supported organization and logistics across multiple TEDx events at Applied Science Private University.</li>
+              </ul>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+              <h4>Community Volunteer &mdash; Conferences &amp; Clubs</h4>
+              <h5>2022 &ndash; Present</h5>
+              <ul>
+                <li>Volunteered at Vivid Leadership Conference, Promise Translator initiative, ELO, and ASU Software Engineering Club.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>My Work</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-flutter">Flutter</li>
+              <li data-filter=".filter-web">Web / ASP.NET</li>
+              <li data-filter=".filter-java">Java</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <!-- JoRide -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-flutter filter-web" data-aos="fade-up">
+            <div class="proj-title">JoRide — Smart Ride-Sharing Platform</div>
+            <div class="portfolio-wrap">
+              <div class="proj-thumb" style="background:linear-gradient(135deg,#040b14 0%,#073d1a 100%);">&#128665;</div>
+              <div class="portfolio-info">
+                <h4>JoRide</h4>
+                <p>Flutter · ASP.NET C# · MySQL · IoT/GPS</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/omaralrayyan7/joride-frontend" target="_blank" title="Frontend Repo"><i class="bx bxl-github"></i></a>
+                  <a href="https://github.com/omaralrayyan7/joride-backend" target="_blank" title="Backend Repo"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alrayyan Group -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="100">
+            <div class="proj-title">Alrayyan Group Website</div>
+            <div class="portfolio-wrap">
+              <div class="proj-thumb" style="background:linear-gradient(135deg,#1a0533 0%,#3d0a6e 100%);">&#127970;</div>
+              <div class="portfolio-info">
+                <h4>Alrayyan Group Website</h4>
+                <p>HTML · CSS · JS · Firebase</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/omaralrayyan7/alrayyan" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
+                  <a href="https://alrayyangroup.online" target="_blank" title="Live Site"><i class="bx bx-globe"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pharmacy App -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-flutter" data-aos="fade-up" data-aos-delay="200">
+            <div class="proj-title">Flutter Pharmacy App</div>
+            <div class="portfolio-wrap">
+              <div class="proj-thumb" style="background:linear-gradient(135deg,#062a0e 0%,#0f5c22 100%);">&#128138;</div>
+              <div class="portfolio-info">
+                <h4>Flutter Pharmacy App</h4>
+                <p>Flutter · Dart · Firebase · Android Studio</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/omaralrayyan7/pharmacy-app" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Library System -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-java" data-aos="fade-up">
+            <div class="proj-title">Library Management System</div>
+            <div class="portfolio-wrap">
+              <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1a2e 0%,#1a3a5c 100%);">&#128218;</div>
+              <div class="portfolio-info">
+                <h4>Library Management System</h4>
+                <p>Java · SOLID/GRASP · Design Patterns · UML</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/omaralrayyan7/Library-app" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flight Reservation -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="100">
+            <div class="proj-title">Flight Reservation System</div>
+            <div class="portfolio-wrap">
+              <div class="proj-thumb" style="background:linear-gradient(135deg,#1a0a0a 0%,#5c1a1a 100%);">&#9992;</div>
+              <div class="portfolio-info">
+                <h4>Flight Reservation System</h4>
+                <p>C# · ASP.NET · SQL</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/omaralrayyan7/Flight-reservation-system" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KickZone -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-flutter" data-aos="fade-up" data-aos-delay="200">
+            <div class="proj-title">KickZone</div>
+            <div class="portfolio-wrap">
+              <div class="proj-thumb" style="background:linear-gradient(135deg,#1a1a0a 0%,#5c5c0a 100%);">&#9917;</div>
+              <div class="portfolio-info">
+                <h4>KickZone</h4>
+                <p>Flutter · Dart</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/omaralrayyan7/KickZone-" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MediRoute -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up">
+            <div class="proj-title">MediRoute</div>
+            <div class="portfolio-wrap">
+              <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1a33 0%,#0a3366 100%);">&#127973;</div>
+              <div class="portfolio-info">
+                <h4>MediRoute</h4>
+                <p>Healthcare Navigation App</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/omaralrayyan7/MediRoute" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JSYP -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="100">
+            <div class="proj-title">JSYP Competition Project</div>
+            <div class="portfolio-wrap">
+              <div class="proj-thumb" style="background:linear-gradient(135deg,#1a0a1a 0%,#5c1a5c 100%);">&#128188;</div>
+              <div class="portfolio-info">
+                <h4>JSYP</h4>
+                <p>Competition / Innovation Project</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/omaralrayyan7/JSYP" target="_blank" title="GitHub"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Link Solutions -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="200">
+            <div class="proj-title">Link Solutions Training Projects</div>
+            <div class="portfolio-wrap">
+              <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1a1a 0%,#0a5c5c 100%);">&#128279;</div>
+              <div class="portfolio-info">
+                <h4>Link Solutions Training (8+ Apps)</h4>
+                <p>C# · ASP.NET · SignalR · OAuth 2.0</p>
+                <div class="portfolio-links">
+                  <a href="https://github.com/omaralrayyan7" target="_blank" title="GitHub Profile"><i class="bx bxl-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Technical Skills</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-12" data-aos="fade-up">
+
+            <div class="skills-box" data-aos="fade-up" data-aos-delay="100">
+              <h4>Languages &amp; Databases</h4>
+              <div class="logos">
+                <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-ar21.svg" alt="Dart" title="Dart">
+                <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="Java" title="Java">
+                <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="HTML5" title="HTML5">
+                <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-ar21.svg" alt="CSS3" title="CSS3">
+                <img src="https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg" alt="JavaScript" title="JavaScript">
+                <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="MySQL" title="MySQL">
+              </div>
+            </div>
+
+            <div class="skills-box" data-aos="fade-up" data-aos-delay="200">
+              <h4>Frameworks &amp; Platforms</h4>
+              <div class="logos">
+                <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-ar21.svg" alt="Flutter" title="Flutter">
+                <img src="https://www.vectorlogo.zone/logos/dotnet/dotnet-ar21.svg" alt="ASP.NET Core" title="ASP.NET Core">
+                <img src="https://www.vectorlogo.zone/logos/firebase/firebase-ar21.svg" alt="Firebase" title="Firebase">
+                <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="Bootstrap" title="Bootstrap">
+                <img src="https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg" alt="MySQL" title="MySQL">
+              </div>
+            </div>
+
+            <div class="skills-box" data-aos="fade-up" data-aos-delay="300">
+              <h4>Tools</h4>
+              <div class="logos">
+                <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="Git" title="Git">
+                <img src="https://www.vectorlogo.zone/logos/figma/figma-ar21.svg" alt="Figma" title="Figma">
+                <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-ar21.svg" alt="Postman" title="Postman">
+                <img src="https://www.vectorlogo.zone/logos/android/android-ar21.svg" alt="Android Studio" title="Android Studio">
+                <img src="https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-ar21.svg" alt="JIRA" title="JIRA">
+              </div>
+            </div>
+
+            <div class="skills-box" data-aos="fade-up" data-aos-delay="400">
+              <h4>Practices &amp; Methodologies</h4>
+              <div class="skills-tags">
+                <span>SOLID &amp; GRASP</span>
+                <span>Design Patterns</span>
+                <span>UML / ERD</span>
+                <span>Agile / Scrum</span>
+                <span>JWT Auth</span>
+                <span>OAuth 2.0</span>
+                <span>XSS Mitigation</span>
+                <span>REST APIs</span>
+                <span>SignalR</span>
+                <span>CAN Bus / IoT</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contacts" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Get In Touch</p>
+        </div>
+        <div class="row mt-2">
+
+          <div class="col-md-6 d-flex align-items-stretch mb-4">
+            <div class="info-box">
+              <i class="bx bx-map"></i>
+              <h3>Location</h3>
+              <p>Amman, Jordan</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex align-items-stretch mb-4">
+            <div class="info-box">
+              <i class="bx bx-share-alt"></i>
+              <h3>Social Profiles</h3>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/omar-alrayyan" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/omaralrayyan7" target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="mailto:omaralrayyan7@gmail.com"><i class="bx bxl-google"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex align-items-stretch mb-4">
+            <div class="info-box">
+              <i class="bx bx-envelope"></i>
+              <h3>Email</h3>
+              <p>omaralrayyan7@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex align-items-stretch mb-4">
+            <div class="info-box">
+              <i class="bx bx-phone-call"></i>
+              <h3>Phone</h3>
+              <p>+962 790 550 787</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div><!-- End #main -->
+
+  <footer id="footer">
+    <div class="container">
+      <p>&copy; 2025 <strong>Omar Alaa Alrayyan</strong>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Vendor JS -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <script>
+    // AOS
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true, mirror: false });
+
+    // Typed.js — same strings/speeds as reference
+    new Typed('.typing', {
+      strings: ["Software Engineer", "Flutter Developer", "Full-Stack Developer", "IoT Enthusiast"],
+      loop: true,
+      typeSpeed: 65,
+      backSpeed: 65
+    });
+
+    // Mobile nav
+    const toggle = document.getElementById('mobileNavToggle');
+    const hdr    = document.getElementById('header');
+    const overly = document.createElement('div');
+    overly.className = 'mobile-nav-overly';
+    document.body.appendChild(overly);
+
+    function openNav()  { hdr.classList.add('header-show');    overly.style.display = 'block'; toggle.innerHTML = '<i class="bx bx-x"></i>'; }
+    function closeNav() { hdr.classList.remove('header-show'); overly.style.display = 'none';  toggle.innerHTML = '<i class="bx bx-menu"></i>'; }
+
+    toggle.addEventListener('click', () => hdr.classList.contains('header-show') ? closeNav() : openNav());
+    overly.addEventListener('click', closeNav);
+
+    // Smooth scroll + close mobile nav
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); closeNav(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    // Highlight active nav link on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = '#' + s.id; });
+      navLinks.forEach(a => {
+        a.parentElement.classList.remove('active');
+        if (a.getAttribute('href') === current) a.parentElement.classList.add('active');
+      });
+    });
+
+    // Isotope portfolio filter
+    $(function () {
+      const iso = $('.portfolio-container').isotope({ itemSelector: '.portfolio-item', layoutMode: 'fitRows' });
+      $('#portfolio-flters li').on('click', function () {
+        $('#portfolio-flters li').removeClass('filter-active');
+        $(this).addClass('filter-active');
+        iso.isotope({ filter: $(this).data('filter') });
+      });
+    });
+  </script>
+
+</body>
+</html>
