@@ -1,36 +1,46 @@
 # omaralrayyan7.github.io
 
-Personal portfolio site for Omar Alrayyan — Software Engineer specializing in Flutter, ASP.NET Core, and IoT.
+[![Live](https://img.shields.io/badge/Live-omaralrayyan7.github.io-brightgreen)](https://omaralrayyan7.github.io/)
+[![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub_Pages-181717?logo=github)](https://pages.github.com/)
 
-**Live:** [omaralrayyan7.github.io](https://omaralrayyan7.github.io/)
+Personal portfolio site for **Omar Alrayyan** — Software Engineer specializing in Flutter, ASP.NET Core, and IoT.
 
-## Overview
+**🌐 Live:** [omaralrayyan7.github.io](https://omaralrayyan7.github.io/)
 
-A single-page portfolio covering about/bio, education, certifications, work experience, projects, technical skills, and contact info. Built as a static site and deployed via GitHub Pages.
+## Preview
+
+![Portfolio Preview](docs/screenshot.png)
 
 ## Tech Stack
 
-HTML · CSS · JavaScript
+Vanilla HTML · CSS · JavaScript — no frameworks, no build step.
 
 ## Sections
 
-- **About** — bio, focus areas (Flutter, ASP.NET Core, IoT & GPS)
-- **Education** — B.Sc. Software Engineering, Applied Science Private University
-- **Certifications** — CS50x, AZ-900, ASP.NET, AWS AI Overview, Git & GitHub
-- **Experience** — JoRide (Founder & Lead Developer), Hope International, Link Solutions internships
-- **Projects** — JoRide, Alrayyan Group Website, Flutter Pharmacy App, Library Management System, Flight Reservation System, KickZone, MediRoute, JSYP
-- **Skills** — languages, frameworks, tools, practices & methodologies
-- **Contact** — email, LinkedIn, GitHub
+| Section | Content |
+|---|---|
+| **About** | Bio, focus areas (Flutter, ASP.NET Core, IoT & GPS) |
+| **Education** | B.Sc. Software Engineering, Applied Science Private University (2022–2026) |
+| **Certifications** | CS50x, AZ-900, ASP.NET, AWS AI Overview, Git & GitHub |
+| **Experience** | JoRide (Founder & Lead Dev), Hope International, Link Solutions |
+| **Projects** | JoRide, Alrayyan, Pharmacy App, Library App, Flight Reservation, KickZone, MediRoute, JSYP |
+| **Skills** | Languages, frameworks, tools, practices & methodologies |
+| **Contact** | Email, LinkedIn, GitHub |
 
 ## Setup / Run
 
-Static site, no build step required.
+Static site — no build step.
 
 ```bash
 git clone https://github.com/omaralrayyan7/omaralrayyan7.github.io.git
 cd omaralrayyan7.github.io
-# open index.html in a browser, or serve locally:
+open index.html
+# or serve locally:
 python3 -m http.server 8000
 ```
 
-Deployed automatically via GitHub Pages from this repo.
+Deployed automatically via GitHub Pages on every push to `main`.
+
+## License
+
+[MIT](LICENSE)
